@@ -23,7 +23,7 @@ public class QuizController {
         return quizService.createQuiz(category,numQ,title);
     }
 
-    @GetMapping("getne/{id}")
+    @GetMapping("getnew/{id}")
     public ResponseEntity<List<QuestionWrapper>> getQuiz(@PathVariable int id) {
         return quizService.getQuizQuestions(id);
     }
