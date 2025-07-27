@@ -13,12 +13,12 @@ import java.util.List;
 
 @Service
 public class QuestionService {
-    @Autowired
-    QuestionDao questionDao;
+    //@Autowired
+    //QuestionDao questionDao;
 
     public ResponseEntity<List<Question>> getAllQuestions() {
         try {
-            return new ResponseEntity<>(questionDao.findAll(), HttpStatus.OK);
+      //      return new ResponseEntity<>(questionDao.findAll(), HttpStatus.OK);
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -28,7 +28,7 @@ public class QuestionService {
 
     public ResponseEntity<List<Question>> getQuestionsByCategory(String category) {
         try {
-            return new ResponseEntity<>(questionDao.findByCategory(category), HttpStatus.OK);
+     //       return new ResponseEntity<>(questionDao.findByCategory(category), HttpStatus.OK);
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -37,7 +37,7 @@ public class QuestionService {
     }
 
     public ResponseEntity<String> addQuestion(Question question) {
-        questionDao.save(question);
+       // questionDao.save(question);
         return new ResponseEntity<>("Success",HttpStatus.CREATED);
     }
 }
